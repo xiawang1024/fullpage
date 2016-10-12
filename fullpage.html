@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>fullpage</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
+	<style type="text/css">
+		body{
+			color: #333;
+			background-color: rgb(240, 242, 244);
+		}
+		h1{
+			font-size: 5em;
+			font-family: arial,helvetica;
+			margin:0;
+			padding:0;
+		}
+		
+		.section{
+			box-sizing: border-box;
+			overflow: hidden;
+			text-align: center;
+		}
+
+		/*section1*/
+		.section1{
+			padding: 60px 0;
+			text-align: center;
+		}
+		.section1 img{
+			height: 100%;
+			margin:40px 0 0 0;
+		}
+
+		/*section2*/
+		
+		.section2{
+
+		}
+		.section2 .wrap{
+			width: 1200px;height: 696px;
+			margin: auto auto;  /*绝对水平垂直居中*/
+			position: absolute;
+			top: 0;right: 0;bottom: 0;left: 0;
+			/*overflow: hidden;*/
+		}
+		.imgBox,.box{
+			float: left;
+		}
+		.imgBox{
+			width: 800px;height: 100%;
+			position: relative;
+		}
+		.imgBox img{
+			position: absolute;
+			left: 40px;
+		}
+		#ip2,#ip4{
+			z-index: 1;
+		}
+		#ip3{
+			z-index: 2;
+		}
+		.box{
+			width: 400px;height: 100%;
+			padding: 15px;margin-top: 60px;
+			box-sizing: border-box;
+			font-size: 22px;
+			color: #808080;
+			line-height: 1.5;
+		}
+	</style>
+</head>
+<body>
+	<div id="dowebok">
+		<div class="section section1 active">
+			<h1>Apple IPHONE 5C</h1>
+			<img src="img/iphone1.jpg" alt="iphone" />
+		</div>
+		<div class="section section2">
+			<div class="wrap">
+				<div class="imgBox">
+					<img src="img/iphone2.png" alt="" id="ip2">
+					<img src="img/iphone3.png" alt="" id="ip3">
+					<img src="img/iphone4.png" alt="" id="ip4">
+				</div>
+				<div class="box">
+					<h2>A powerful plugin</h2>
+					<p>fullPage.js callbacks allow you to create amazing dynamic sites with a bit of imagination. This example tries to reproduce the Apple iPhone-5c website animations as an example of what fullPage.js is capable of.</p>
+				</div>
+			</div>
+
+		</div>
+		<div class="section section3"></div>
+		<div class="section section4"></div>
+	</div>
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>	
+<script>
+	$("#dowebok").fullpage({
+		'verticalCentered': false,
+		'resize':true,
+		'navigation':true,
+	});
+</script>
+</body>
+</html>
