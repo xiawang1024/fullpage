@@ -74,19 +74,16 @@
 		#ip4.active{
 			transform: translateX(620px);
 		}
-		.imgBox img{
-			transition: all 0.6s ease-out;
+		.imgBox img,.section3 .imgBox{
+			transition: all 0.8s ease-out;
 		}
 
 		/*section3*/
-		#ipYellow.active{
-			transform: translate(-300px,30px);
+		.section3 .imgBox{
+			transform: translateY(50px);
 		}
-		#ipRed.active{
-			transform: translate(30px,-120px);
-		}
-		#ipBlue.active{
-			transform: translate(380px,376px);
+		.section3 .imgBox.active{
+			transform: translateY(-170px);
 		}
 		#ipYellow{
 			transform: translate(-300px,200px);
@@ -98,9 +95,9 @@
 			transform: translate(380px,546px);
 		}
 		.section3 .box{
-			margin:150px 0 0 -350px;
+			margin:40px 0 0 -350px;
 			width: 660px;
-			padding-left: 30px;
+			padding-left: 40px;
 			text-align: left;
 		}
 	</style>
@@ -153,7 +150,14 @@
 			if(index == 2){
 				$('#ip3, #ip2, #ip4').addClass('active');
 			}
-			
+		},
+		'onLeave':function(index,nextIndex,direction){
+			if(index==2&&direction==="down"){
+				$(".section3 .imgBox").toggleClass('active');
+			}
+			if(index==3&&direction==="up"){
+				$(".section3 .imgBox").toggleClass('active');
+			}
 		},
 	});
 </script>
