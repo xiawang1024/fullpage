@@ -33,11 +33,7 @@
 		}
 
 		/*section2*/
-		
-		.section2{
-
-		}
-		.section2 .wrap{
+		.section2 .wrap,.section3 .wrap{
 			width: 1200px;height: 696px;
 			margin: auto auto;  /*绝对水平垂直居中*/
 			position: absolute;
@@ -79,7 +75,33 @@
 			transform: translateX(620px);
 		}
 		.imgBox img{
-			transition: all 0.5s;
+			transition: all 0.6s ease-out;
+		}
+
+		/*section3*/
+		#ipYellow.active{
+			transform: translate(-300px,30px);
+		}
+		#ipRed.active{
+			transform: translate(30px,-120px);
+		}
+		#ipBlue.active{
+			transform: translate(380px,376px);
+		}
+		#ipYellow{
+			transform: translate(-300px,200px);
+		}
+		#ipRed{
+			transform: translate(30px,50px);
+		}
+		#ipBlue{
+			transform: translate(380px,546px);
+		}
+		.section3 .box{
+			margin:150px 0 0 -350px;
+			width: 660px;
+			padding-left: 30px;
+			text-align: left;
 		}
 	</style>
 </head>
@@ -101,9 +123,20 @@
 					<p>fullPage.js callbacks allow you to create amazing dynamic sites with a bit of imagination. This example tries to reproduce the Apple iPhone-5c website animations as an example of what fullPage.js is capable of.</p>
 				</div>
 			</div>
-
 		</div>
-		<div class="section section3"></div>
+		<div class="section section3">
+			<div class="wrap">
+				<div class="imgBox">
+					<img src="img/iphone-yellow.png" alt="" id="ipYellow">
+					<img src="img/iphone-red.png" alt="" id="ipRed">
+					<img src="img/iphone-blue.png" alt="" id="ipBlue">
+				</div>
+				<div class="box">
+					<h2>Amazing stuff</h2>
+					<p>Combining <strong>fullPage.js</strong> with your own CSS styles and animations, you will be able to create something remarkable.</p>
+				</div>
+			</div>
+		</div>
 		<div class="section section4"></div>
 	</div>
 
@@ -115,11 +148,13 @@
 		'verticalCentered': false,
 		'resize':true,
 		'navigation':true,
+		'css3':true,
 		'afterLoad': function(anchorLink, index){
-					if(index == 2){
-						$('#ip3, #ip2, #ip4').addClass('active');
-					}
-				},
+			if(index == 2){
+				$('#ip3, #ip2, #ip4').addClass('active');
+			}
+			
+		},
 	});
 </script>
 </body>
