@@ -55,19 +55,31 @@
 			position: absolute;
 			left: 40px;
 		}
+		.box{
+			width: 400px;height: 100%;
+			padding: 10px;margin-top: 60px;
+			box-sizing: border-box;
+			font-size: 22px;
+			color: #808080;
+			line-height: 1.5;
+		}
 		#ip2,#ip4{
 			z-index: 1;
 		}
 		#ip3{
 			z-index: 2;
 		}
-		.box{
-			width: 400px;height: 100%;
-			padding: 15px;margin-top: 60px;
-			box-sizing: border-box;
-			font-size: 22px;
-			color: #808080;
-			line-height: 1.5;
+		#ip2.active{
+			transform: translateX(-70px);
+		}
+		#ip3.active{
+			transform: translateX(280px);
+		}
+		#ip4.active{
+			transform: translateX(620px);
+		}
+		.imgBox img{
+			transition: all 0.5s;
 		}
 	</style>
 </head>
@@ -103,6 +115,11 @@
 		'verticalCentered': false,
 		'resize':true,
 		'navigation':true,
+		'afterLoad': function(anchorLink, index){
+					if(index == 2){
+						$('#ip3, #ip2, #ip4').addClass('active');
+					}
+				},
 	});
 </script>
 </body>
