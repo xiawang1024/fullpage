@@ -34,7 +34,7 @@
 		}
 
 		/*section2*/
-		.section2 .wrap,.section3 .wrap,.section4 .wrap{
+		.section2 .wrap,.section3 .wrap,.section4 .wrap,#ipGreen .wrap{
 			width: 1200px;height: 696px;
 			margin: auto auto;  /*绝对水平垂直居中*/
 			position: absolute;
@@ -109,31 +109,40 @@
 			transform: translate(280px,120px);
 		}*/
 		.section4 .wrap{
-			width: 800px;margin-top: 0;
+			margin-top: 0;
 			height: 100%;
 		}
 		.section4 .box{
 			width: auto;
-			margin-top:10%;
+			margin-top:6%;
 		}
 		.section4 .imgBox{
-			top:30%;left:180px;
+			top:26%;left:180px;
 			position: absolute;
+			transform: translateX(194px);
 		}
 
-
-		#ipGreen{
+		#ipGreen .wrap{
+			width: 1200px;margin:0 auto;
 			position: absolute;
 			z-index: 1;
+		}
+		#ipGreen{
+			width: 100%;
+			position: relative;
 			top: 260%;
-			left: 18%;
+		}
+		#ipGreen .wrap img{
+			transform: translate(70px,20px);
 		}
 	</style>
 </head>
 <body>
 	<div id="dowebok">
 		<div id="ipGreen">
-			<img src="img/iphone-green.png">
+			<div class="wrap">
+				<img src="img/iphone-green.png">
+			</div>
 		</div>
 		<div class="section section1 active">
 			<h1>Apple IPHONE 5C</h1>
