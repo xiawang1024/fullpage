@@ -82,6 +82,7 @@
 		/*section3*/
 		.section3 .imgBox{
 			transform: translateY(50px);
+			z-index: 10;
 		}
 		.section3 .imgBox.active{
 			transform: translateY(-170px);
@@ -104,10 +105,36 @@
 		}
 
 		/*section4*/
+		/*#ipTwo{
+			transform: translate(280px,120px);
+		}*/
+		.section4 .wrap{
+			width: 800px;margin-top: 0;
+			height: 100%;
+		}
+		.section4 .box{
+			width: auto;
+			margin-top:10%;
+		}
+		.section4 .imgBox{
+			top:30%;left:180px;
+			position: absolute;
+		}
+
+
+		#ipGreen{
+			position: absolute;
+			z-index: 1;
+			top: 260%;
+			left: 18%;
+		}
 	</style>
 </head>
 <body>
 	<div id="dowebok">
+		<div id="ipGreen">
+			<img src="img/iphone-green.png">
+		</div>
 		<div class="section section1 active">
 			<h1>Apple IPHONE 5C</h1>
 			<img src="img/iphone1.jpg" alt="iphone" />
