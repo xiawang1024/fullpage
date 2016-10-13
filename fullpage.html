@@ -20,6 +20,7 @@
 			box-sizing: border-box;
 			overflow: hidden;
 			text-align: center;
+			
 		}
 
 		/*section1*/
@@ -33,7 +34,7 @@
 		}
 
 		/*section2*/
-		.section2 .wrap,.section3 .wrap{
+		.section2 .wrap,.section3 .wrap,.section4 .wrap{
 			width: 1200px;height: 696px;
 			margin: auto auto;  /*绝对水平垂直居中*/
 			position: absolute;
@@ -53,7 +54,7 @@
 		}
 		.box{
 			width: 400px;height: 100%;
-			padding: 10px;margin-top: 60px;
+			padding: 10px;margin-top: 12%;
 			box-sizing: border-box;
 			font-size: 22px;
 			color: #808080;
@@ -95,11 +96,14 @@
 			transform: translate(380px,546px);
 		}
 		.section3 .box{
-			margin:40px 0 0 -350px;
+			margin:10% 0 0 -350px;
 			width: 660px;
 			padding-left: 40px;
 			text-align: left;
+			height: auto;
 		}
+
+		/*section4*/
 	</style>
 </head>
 <body>
@@ -134,7 +138,17 @@
 				</div>
 			</div>
 		</div>
-		<div class="section section4"></div>
+		<div class="section section4">
+			<div class="wrap">
+				<div class="box">
+					<h2>Amazing stuff</h2>
+					<p>Combining <strong>fullPage.js</strong> with your own CSS styles and animations, you will be able to create something remarkable.</p>
+				</div>
+				<div class="imgBox" >
+					<img src="img/iphone-two.png" alt="" id="ipTwo">
+				</div>
+			</div>
+		</div>
 	</div>
 
 <script src="js/jquery.js"></script>
