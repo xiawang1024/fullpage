@@ -4,222 +4,99 @@
 	<meta charset="UTF-8">
 	<title>fullpage</title>
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css">
-	<style type="text/css">
-		body{
-			color: #333;
-			background-color: rgb(240, 242, 244);
-		}
-		h1{
-			font-size: 5em;
-			font-family: arial,helvetica;
-			margin:0;
-			padding:0;
-		}
-		
-		.section{
-			box-sizing: border-box;
-			overflow: hidden;
-			text-align: center;
-			
-		}
-
-		/*section1*/
-		.section1{
-			padding: 60px 0;
-			text-align: center;
-		}
-		.section1 img{
-			height: 100%;
-			margin:40px 0 0 0;
-		}
-
-		/*section2*/
-		.section2 .wrap,.section3 .wrap,.section4 .wrap,#ipGreen .wrap{
-			width: 1200px;height: 696px;
-			margin: auto auto;  /*绝对水平垂直居中*/
-			position: absolute;
-			top: 0;right: 0;bottom: 0;left: 0;
-			/*overflow: hidden;*/
-		}
-		.imgBox,.box{
-			float: left;
-		}
-		.imgBox{
-			width: 800px;height: 100%;
-			position: relative;
-		}
-		.imgBox img{
-			position: absolute;
-			left: 40px;
-		}
-		.box{
-			width: 400px;height: 100%;
-			padding: 10px;margin-top: 12%;
-			box-sizing: border-box;
-			font-size: 22px;
-			color: #808080;
-			line-height: 1.5;
-		}
-		#ip2,#ip4{
-			z-index: 1;
-		}
-		#ip3{
-			z-index: 2;
-		}
-		#ip2.active{
-			transform: translateX(-70px);
-		}
-		#ip3.active{
-			transform: translateX(280px);
-		}
-		#ip4.active{
-			transform: translateX(620px);
-		}
-		.imgBox img,.section3 .imgBox{
-			transition: all 0.8s ease-out;
-		}
-
-		/*section3*/
-		.section3 .imgBox{
-			transform: translateY(50px);
-			z-index: 10;
-		}
-		.section3 .imgBox.active{
-			transform: translateY(-170px);
-		}
-		#ipYellow{
-			transform: translate(-300px,200px);
-		}
-		#ipRed{
-			transform: translate(30px,50px);
-		}
-		#ipBlue{
-			transform: translate(380px,546px);
-		}
-		.section3 .box{
-			margin:10% 0 0 -350px;
-			width: 660px;
-			padding-left: 40px;
-			text-align: left;
-			height: auto;
-		}
-
-		/*section4*/
-		/*#ipTwo{
-			transform: translate(280px,120px);
-		}*/
-		.section4 .wrap{
-			margin-top: 0;
-			height: 100%;
-		}
-		.section4 .box{
-			width: auto;
-			margin-top:6%;
-		}
-		.section4 .imgBox{
-			top:26%;left:180px;
-			position: absolute;
-			transform: translateX(194px);
-		}
-
-		
-		#ipGreen{
-			width: 100%;
-			height: 100%;
-			position: relative;
-			top: 400%;
-		}
-		#ipGreen .wrap{
-			width: 1200px;margin:0 auto;
-			position: absolute;
-			z-index: 1;
-			top:26%;
-			padding: 0;
-		}
-		#ipGreen .wrap img{
-			transform: translate(70px,-624px);
-			transition: all 0.6s;
-		}
-		#ipGreen .wrap img.down{
-			transform: translate(70px,0px);
-		}
-
-	</style>
 </head>
+<style type="text/css">
+	.section .active{
+		text-align: center;
+		padding: 60px 0;
+		background-color: green;
+	}
+	.section .active img{
+		height: 100%;width:auto;
+	    margin-top: 40px;
+	}
+</style>
 <body>
 	<div id="dowebok">
-		<div id="ipGreen">
-			<div class="wrap">
-				<img src="img/iphone-green.png">
-			</div>
+		<div class="section active">
+			<h1>Apple</h1>
+			<img src="img/iphone1.jpg">
 		</div>
-		<div class="section section1 active">
-			<h1>Apple IPHONE 5C</h1>
-			<img src="img/iphone1.jpg" alt="iphone" />
+		<div class="section"><h3>第二屏</h3></div>
+		<div class="section">
+			<div class="slide"><h3>第三屏的第一屏</h3></div>
+			<div class="slide"><h3>第三屏的第二屏</h3></div>
+			<div class="slide" id="slide-3"><h3>第三屏的第三屏</h3></div>
+			<div class="slide"><h3>第三屏的第四屏</h3></div>
 		</div>
-		<div class="section section2">
-			<div class="wrap">
-				<div class="imgBox">
-					<img src="img/iphone2.png" alt="" id="ip2">
-					<img src="img/iphone3.png" alt="" id="ip3">
-					<img src="img/iphone4.png" alt="" id="ip4">
-				</div>
-				<div class="box">
-					<h2>A powerful plugin</h2>
-					<p>fullPage.js callbacks allow you to create amazing dynamic sites with a bit of imagination. This example tries to reproduce the Apple iPhone-5c website animations as an example of what fullPage.js is capable of.</p>
-				</div>
-			</div>
-		</div>
-		<div class="section section3">
-			<div class="wrap">
-				<div class="imgBox">
-					<img src="img/iphone-yellow.png" alt="" id="ipYellow">
-					<img src="img/iphone-red.png" alt="" id="ipRed">
-					<img src="img/iphone-blue.png" alt="" id="ipBlue">
-				</div>
-				<div class="box">
-					<h2>Amazing stuff</h2>
-					<p>Combining <strong>fullPage.js</strong> with your own CSS styles and animations, you will be able to create something remarkable.</p>
-				</div>
-			</div>
-		</div>
-		<div class="section section4">
-			<div class="wrap">
-				<div class="box">
-					<h2>Amazing stuff</h2>
-					<p>Combining <strong>fullPage.js</strong> with your own CSS styles and animations, you will be able to create something remarkable.</p>
-				</div>
-				<div class="imgBox" >
-					<img src="img/iphone-two.png" alt="" id="ipTwo">
-				</div>
-			</div>
-		</div>
+		<div class="section"><h3>第四屏</h3></div>
 	</div>
+
+
 
 <script src="js/jquery.js"></script>
 <script src="js/jquery-ui.js"></script>
-<script src="js/jquery.fullPage.min.js"></script>	
-<script>
+<script src="js/jquery.fullPage.min.js"></script>
+<script type="text/javascript">
 	$("#dowebok").fullpage({
-		'verticalCentered': false,
-		'resize':true,
-		'navigation':true,
-		'css3':true,
-		'afterLoad': function(anchorLink, index){
-			if(index == 2){
-				$('#ip3, #ip2, #ip4').addClass('active');
-			}
-		},
-		'onLeave':function(index,nextIndex,direction){
-			if(index==2&&direction==="down"){
-				$(".section3 .imgBox").toggleClass('active');
-			}
-			else if(index==3&&direction==="up"){
-				$(".section3 .imgBox").toggleClass('active');
-			}
-			$("#ipGreen img").toggleClass("down",(index==3&&direction==="down"));
-		},
-	});
+		controlArrows:true,//决定是否使用控制箭头向左向右移动slide
+		verticalCentered:true,//是否垂直居中网页中的内容
+		resize:true,//窗口改变，自动调整网页中的文字
+		scrollingSpeed:800,//屏幕滚动动画执行的时间，单位毫秒
+		sectionsColor:['#f2f2f2', '#4BBFC3', '#7BAABE', 'whitesmoke', '#000'],//定义sectiond的背景颜色
+		// //anchors: 定义导航锚点
+		// // easing:"puff",//定义用于垂直和水平滚动的过度效果
+		// // easingcss3:true,//定义在滚动屏幕中使用css3：true设置的过度效果
+		// loopTop:false,//定义屏幕滚动到第一个后，是否循序滚动到最后一个
+		// loopBottom:false,//定义屏幕滚动到最后一个后，是否循序滚动到第一个
+		// loopHorizontal:true,//定义水平幻灯片是否循环切换
+		// css3:true,//确定是否使用JavaScript和CSS3转换滚动在切片和幻灯片。加快平板电脑和移动设备的浏览器支持CSS3的运动有益。如果此选项设置为true，浏览器不支持CSS3，jQuery回调函数将被替代
+		// autoScrolling:true,//定义屏幕是否自动滚动，还是需要用户触发事件滚动
+		// fitToSection:false,//设置是否自适应整个窗口的空间，以某个section的内容为分界线，设置为true时，某个的section将填充到整个页面，否者用户可以停留在网页的任何位置。
+		// scrollBar:true,//是否使用浏览器默认的滚动条
+		// //paddingTop:"10px",//默认值：0，定义每个section固定的头部留白，例如设置paddingBottom: ’10px’、 paddingBottom: ’10em’、……，在使用固定表头的情况下有用的。
+		// //fixedElements:null,//默认值：null，定义的某个元素是否在网页的固定位置，元素将被关闭的插件是必要的时候，使用CSS3的选项保持滚动结构固定。它需要对这些元素的jQuery选择器字符串。例如：fixedElements: ‘#element1, .element2
+		// //normalScrollElements 默认值：null，如果你想避免自动滚动，滚动时的一些元素，这是你需要使用的选项。（有用的地图，滚动div等）需要对这些元素的jQuery选择器字符串。例如：normalScrollElements: ‘#element1, .element2’。
+		// //normalScrollElementTouchThreshold//默认值：5，定义了一个数字，测试HTML标签树的机构，是否在在移动设备上支持触摸事件。
+		// keyboardScrolling:true,//定义是否可以通过键盘箭头事件控制section的滚动
+		// //touchSensitivity//默认值：5，定义了浏览器窗口的宽度/高度的百分比，多远的触摸滑动可以跳转到下一个section / slide。
+		// //continuousVertical//默认值：false，定义向下滚动到最后一节是否应该向下滚动到第一个，如果向上滚动的第一部分应该滚动到最后一个。不兼容loopTop和loopBottom选项
+		// //animateAnchor//默认值：true，定义当网页的URL中有锚文本的时候，是否帮用户定位到对应的section或者slide。
+		// recordHistory:true,//默认值：true，定义是否将网页滚动的的状态纪录到浏览器的历史记录中,当设置为true时，每一个section/slide滚动的状态将纪录到浏览器的历史纪录中，这样的设置有利于用户方便回退到刚才浏览的内容。当设置为false时候，用户的浏览路径不会记录到浏览器的历史纪录中，如果要取消这个选项可以使用autoScrolling:false。
+		// anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+  //   	menu: '#myMenu',//默认值：false，一个选择器可以用来指定要与滚动互动的导航菜单，有点类似与Bootstrap的滚动监听。这样到滚动到某个section时，对应的菜单会被自动添加active类。
+  //   	navigation:true,//默认值：false，如果设置为true，那他将会显示一个小圆圈组成的快速导航栏。
+  //   	// navigationPosition:none,//默认值：none，结合参数navigation一起使用，用于设置navigation定义的菜单显示的位置，可以设置为left/right。
+  //   	// navigationTooltips//默认值：[]，定义当navigation设置为true的时候，鼠标移动到快速导航上面的提示文本，每个属性中间用英文半角逗号（,）隔开。
+  //   	slidesNavigation:true,//默认值：false，使用方法同navigation，不过这个参数设置的导航显示位置不同，而且这个是用户设置幻灯片的。
+  //   	// slidesNavPosition//默认值：bottom，定义slidesNavigation中设置的导航菜单显示的位置，可选的设置值为top/bottom，你可能要修改CSS样式确定的距离从顶部或底部以及任何其他风格如颜色。
+  //   	 scrollOverflow:false,//默认值：false，设置当内容超过屏幕的高度的时候，是否裁切多余的内容。//当设置为true时，你的内容将会被自动裁切，可以考虑当afterRender回调函数调用的时候，处理你的内容的多少或者使用其它的插件库合理的处理多余的内容。//当设置为false时，插件不会自动裁切多余的内容，但是剩下没有显示的内容任然不能显示，此时，你可以使用 jquery.slimscroll.min插件来自定义滚动事件，如果要使用这个插件，应该在Fullpage插件之前引入，例如下面的代码：
+    	 // 回掉函数
+	//  anchors: ['firstPage', 'secondPage', 'thirdPage', 'fourthPage', 'lastPage'],
+	//  afterLoad: function(anchorLink, index){
+	//  	var loadedSection = $(this);
+	// //using index
+	// if(index == 3){
+	// 	alert("Section 3 ended loading");
+	// }
+	// 	//using anchorLink
+	// 	if(anchorLink == 'secondSlide'){
+	// 		alert("Section 2 ended loading");
+	// 	}
+	// },
+	// afterRender: function(){
+	// 	var pluginContainer = $(this);
+	// 	alert("The resulting DOM structure is ready");
+	// },
+	// afterResize: function(){
+ //        var pluginContainer = $(this);
+ //        alert("The sections have finished resizing");
+ //    }
+});
+	// $.fn.fullpage.moveTo(2,0);
+	// $.fn.fullpage.moveSlideRight();
+	
+	
 </script>
 </body>
 </html>
